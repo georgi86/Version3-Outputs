@@ -107,8 +107,8 @@ namespace Outputs
             repo.OpenSnapXRoutine.Text1148.PressKeys("{Delete}");
             Delay.Milliseconds(100);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationOutputs\\RoutineAllOutputTypes.mxy'.", new RecordItemIndex(6));
-            Keyboard.Press("D:\\Joro\\GIT_Automations\\VERSION 3\\AutomationOutputs\\Routine\\AllOutputTypes.mxy");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationOutputs\\Routine\\AllOutputTypes.mxy'.", new RecordItemIndex(6));
+            Keyboard.Press("C:\\JORO\\AUTOMATIONS\\GIT_Automations\\VERSION 3\\AutomationOutputs\\Routine\\AllOutputTypes.mxy");
             Delay.Milliseconds(100);
             
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '{Return}' with focus on 'OpenSnapXRoutine.Text1148'.", repo.OpenSnapXRoutine.Text1148Info, new RecordItemIndex(7));
@@ -159,8 +159,11 @@ namespace Outputs
             // "N" Button
             Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'n'.", new RecordItemIndex(11));
             Keyboard.Press("n");
-            Delay.Milliseconds(0);                        
-            
+            Delay.Milliseconds(0);
+
+
+            ////////// I have to add a code to read from file not to open the files separately//////////////
+
             Report.Log(ReportLevel.Info, "Delay", "Waiting for 2s.", new RecordItemIndex(16));
             Delay.Duration(2000, false);
             
