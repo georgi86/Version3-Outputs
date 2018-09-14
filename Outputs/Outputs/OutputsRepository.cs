@@ -209,6 +209,7 @@ namespace Outputs
             RepoItemInfo _element94Info;
             RepoItemInfo _buttonokInfo;            
             RepoItemInfo _finishInfo;
+            RepoItemInfo _buttongoInfo;
 
             /// <summary>
             /// Creates a new SnapXUntitled  folder.
@@ -219,6 +220,7 @@ namespace Outputs
                 _element94Info = new RepoItemInfo(this, "Element94", "element[@controlid='94']", 30000, null, "76c8b8ce-92bd-450a-8977-236f63e76e7d");                
                 _buttonokInfo = new RepoItemInfo(this, "ButtonOK", "container/form//button[@text='&OK']", 500000, null, "f7b05518-65b8-4d1a-b3d0-ef4b40182a53");                
                 _finishInfo = new RepoItemInfo(this, "Finish", "container[@controlid='59648']//button[@text='Finish' and @enabled='True']", 30000, null, "b11eaeb2-faaa-46af-998b-14a7402099c8");
+                _buttongoInfo = new RepoItemInfo(this, "ButtonGo", "container[@controlid='59648']/form[@title='Untitled']//element[@controlid='59664']/container[@controlid='59648']/button[@text='Go']", 30000, null, "eb68633c-8ac4-4316-8071-80e5d53e7ba6");
             }
 
             /// <summary>
@@ -316,6 +318,27 @@ namespace Outputs
                 get
                 {
                     return _finishInfo;
+                }
+            }
+
+            [RepositoryItem("eb68633c-8ac4-4316-8071-80e5d53e7ba6")]
+            public virtual Ranorex.Button ButtonGo
+            {
+                get
+                {
+                    return _buttongoInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The ButtonGo item info.
+            /// </summary>
+            [RepositoryItemInfo("eb68633c-8ac4-4316-8071-80e5d53e7ba6")]
+            public virtual RepoItemInfo ButtonGoInfo
+            {
+                get
+                {
+                    return _buttongoInfo;
                 }
             }
         }
@@ -1096,6 +1119,8 @@ namespace Outputs
                     return _listitem4Info;
                 }
             }
+
+            
         }
 
     }
